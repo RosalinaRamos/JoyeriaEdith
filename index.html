@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bar-icon.css">
+
+    <title>Welcome to Edith Jewelry</title>
+    <link rel="icon" href="../img/colaboradores/fotoweb.jpeg" type="image/jpeg">
+</head>
+
+<body>
+
+    <!-- Encabezado principal con logo y menú reducido -->
+    <header id="header" class="">
+        <div class="header-content">
+            <div class="header-top">
+                <div class="logo neumorphism">
+                    <a href="index.html">
+                        <img src="img/LogoJoyeria.png" alt="Logo de la joyería">
+                    </a>
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html" data-id="inicio">Inicio</a></li>
+
+                        <li><a href="" data-id="joyas-femeninas">Joyas Femeninas</a>
+                            <ul class="submenu">
+                                <li><a href="pages/Joyas-Femeninas/CollaresyColgantes.html" data-id="collares">Collares
+                                        y Colgantes</a>
+                                </li>
+                                <li><a href="pages/Joyas-Femeninas/BrazaletesyPulseras.html"
+                                        data-id="brazaletes">Brazaletes y Pulseras</a>
+                                </li>
+                                <li><a href="pages/Joyas-Femeninas/Aretes.html" data-id="aretes">Aretes</a></li>
+                                <li><a href="pages/Joyas-Femeninas/Anillos.html" data-id="anillos">Anillos</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="" data-id="joyas-masculinas">Joyas Masculinas</a>
+                            <ul class="submenu">
+                                <li><a href="pages/Joyas-Masculinas/Pulseras.html" data-id="pulseras">Pulseras</a></li>
+                                <li><a href="pages/Joyas-Masculinas/Cadenas.html" data-id="cadenas">Cadenas</a></li>
+                                <li><a href="pages/Joyas-Masculinas/Gemelos.html" data-id="gemelos">Gemelos</a></li>
+                                <li><a href="pages/Joyas-Masculinas/Anillos.html" data-id="anillos">Anillos</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="" data-id="servicios">Servicios</a>
+                            <ul class="submenu">
+                                <li><a href="pages/Servicios/Mantenimiento.html"
+                                        data-id="mantenimiento">Mantenimiento</a></li>
+                                <li><a href="pages/Servicios/Grabado.html" data-id="grabado">Grabado</a></li>
+                                <li><a href="pages/Servicios/Diseño.html" data-id="diseño">Diseño</a></li>
+                                <li><a href="pages/Servicios/AjustedeTalla.html" data-id="ajuste">Ajuste de Talla</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="pages/colaboradores.html" data-id="colaboradores">Colaboradores</a></li>
+
+                        <li><a href="" data-id="edith">Edith</a>
+                            <ul class="submenu">
+                                <li><a href="pages/Edith/Historia.html" data-id="historia">Historia</a></li>
+                                <li><a href="pages/Edith/Misión.html" data-id="misión">Misión</a></li>
+                                <li><a href="pages/Edith/Visión.html" data-id="visión">Visión</a></li>
+                                <li><a href="pages/Edith/Valores.html" data-id="valores">Valores</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="pages/agenda-cita.html" data-id="agenda">Agenda tu Cita</a></li>
+
+                        <li><a href="pages/contacto.html" data-id="contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="icons-right">
+                    <a href="#buscar" class="icon search" onclick="toggleSearchBox()">
+                        <i id="search" class="fas fa-search"></i>
+                    </a>
+                    <a href="#" class="icon user" onclick="toggleLoginForm()">
+                        <i id="user" class="fas fa-user"></i>
+                    </a>
+                    <a href="#carrito" class="icon carrito">
+                        <i id="shopping" class="fas fa-shopping-cart"></i>
+                        <span id="cart-counter" class="cart-counter">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="search-box" class="search-box hidden">
+                <input type="text" id="search-input" placeholder="Escribe para buscar...">
+                <button id="search-btn">Buscar</button>
+            </div>
+
+            <div id="login-form" class="login-form">
+                <div class="form-container">
+                    <h3>Iniciar Sesión</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <span id="email"></span>
+                        </div>
+                        <a href="pages/login.html" class="btn-login">
+                            <h2>Iniciar Sesión</h2>
+                        </a>
+                    </form>
+                </div>
+            </div>
+
+            <div id="carrito-detalle" class="carrito-detalle">
+                <div class="detalle">
+                    <div id="detalle-items" class="detalle-items">
+                    </div>
+
+                    <div class="detalle-total">
+                        <span class="label">Total</span>
+                        <span class="accumulated">S/ 0.00</span>
+                    </div>
+                    <button class="btn-pago">Proceder con el Pago</button>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Banner de imágenes rotatorias -->
+    <section id="banner" class="">
+        <div class="banner-content">
+            <div class="modern-carousel">
+                <div class="modern-carousel-images">
+                    <div class="water-effect"></div>
+                    <div class="carousel-content">
+                        <h2>El Regalo Perfecto</h2>
+                        <p>La perfección está en los detalles. Encuentra el regalo ideal para esa persona especial con
+                            nuestras joyas exclusivas.¡Haz que tu regalo sea inolvidable!
+                        </p>
+                        <a class="learn-more-btn" href="pages/Joyas-Femeninas/CollaresyColgantes.html">Ver más</a></button>
+                    </div>
+                    <img src="img/banner/banner01.jpg" alt="Image 1" class="active">
+                    <img src="img/banner/banner02.jpg" alt="Image 2">
+                    <img src="img/banner/banner03.jpg" alt="Image 3">
+                    <img src="img/banner/banner04.jpg" alt="Image 4">
+                    <img src="img/banner/banner05.jpg" alt="Image 5">
+                </div>
+
+                <div class="carousel-previews">
+                    <div class="preview active-preview"><img src="img/banner/banner01.jpg" alt="Preview 1"></div>
+                    <div class="preview"><img src="img/banner/banner02.jpg" alt="Preview 2"></div>
+                    <div class="preview"><img src="img/banner/banner03.jpg" alt="Preview 3"></div>
+                    <div class="preview"><img src="img/banner/banner04.jpg" alt="Preview 4"></div>
+                    <div class="preview"><img src="img/banner/banner05.jpg" alt="Preview 5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section de Colecciones rotatorias -->
+    <section id="colecciones" class="carousel-container-colecciones">
+        <h2 class="carousel-title">Tu belleza, nuestra inspiración. 🌟 Encuentra las piezas que harán que cada momento sea único.</h2>
+        <div class="carousel-wrapper-colecciones">
+            <div class="carousel-colecciones">
+                <div class="carousel-item-colecciones">
+                    <div class="image-container">
+                        <img src="img/accesorios/Colecciones/collardeperlas.jpg" alt="Anillo">
+                        <div class="description">Collar de Perlas</div>
+                    </div>
+                </div>
+                <div class="carousel-item-colecciones">
+                    <div class="image-container">
+                        <img src="img/accesorios/Colecciones/brazaletedeoroydiamante.jpg" alt="Aretes">
+                        <div class="description">Brazalete de Oro</div>
+                    </div>
+                </div>
+                <div class="carousel-item-colecciones">
+                    <div class="image-container">
+                        <img src="img/accesorios/Colecciones/aretesdediamante.jpg" alt="Pulsera">
+                        <div class="description">Aretes de Plata</div>
+                    </div>
+                </div>
+                <div class="carousel-item-colecciones">
+                    <div class="image-container">
+                        <img src="img/accesorios/Colecciones/anilloartesanal.jpg" alt="Collar">
+                        <div class="description">Anillo Artesanal</div>
+                    </div>
+                </div>
+                <div class="carousel-item-colecciones">
+                    <div class="image-container">
+                        <img src="img/accesorios/Colecciones/pulseraartesanalrobusta.jpg" alt="Aretes Oso">
+                        <div class="description">Pulsera Artesanal Robusta</div>
+                    </div>
+                </div>
+                <div class="carousel-item-colecciones">
+                    <div class="image-container">
+                        <img src="img/accesorios/Colecciones/gemelosoropureza.jpg" alt="Aretes">
+                        <div class="description">Gemelos de Oro Pureza</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators-colecciones">
+            <span class="dot-colecciones"></span>
+            <span class="dot-colecciones"></span>
+            <span class="dot-colecciones"></span>
+            <span class="dot-colecciones"></span>
+            <span class="dot-colecciones"></span>
+        </div>
+    </section>
+
+    <!-- Section de Joyeria rotatorias -->
+    <section id="joyeria-carousel" class="carousel-container-joyeria">
+        <h2 class="carousel-title">Deslumbra con nuestras colecciones exclusivas. ✨ Joyas de calidad que destacan tu elegancia.</h2>
+        <div class="carousel-wrapper-joyeria">
+            <div class="carousel-joyeria">
+                <div class="carousel-item-joyeria"><img src="img/accesorios/imagen01.jpg" alt="Image 1">
+                    <div class="item-details">
+                        <h4>Pulsera de Plata</h4>
+                        <p>S/ 250.00</p>
+                        <a href="pages/Joyas-Femeninas/BrazaletesyPulseras.html"><button class="btn-add-cart">Ver
+                                Joya</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item-joyeria"><img src="img/accesorios/imagen02.jpg" alt="Image 2">
+                    <div class="item-details">
+                        <h4>Aretes Minimalistas</h4>
+                        <p>S/ 350.00</p>
+                        <a href="pages/Joyas-Femeninas/Aretes.html"><button class="btn-add-cart">Ver Joya</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item-joyeria"><img src="img/accesorios/imagen03.jpg"
+                        alt="Image 3">
+                    <div class="item-details">
+                        <h4>Colgante Corazón</h4>
+                        <p>S/ 1000.00</p>
+                        <a href="pages/Joyas-Femeninas/CollaresyColgantes.html"><button class="btn-add-cart">Ver
+                                Joya</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item-joyeria"><img src="img/accesorios/imagen04.jpg"
+                        alt="Image 4">
+                    <div class="item-details">
+                        <h4>Brazalete Artesanal</h4>
+                        <p>S/ 180.00</p>
+                        <a href="pages/Joyas-Femeninas/BrazaletesyPulseras.html"><button class="btn-add-cart">Ver
+                                Joya</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item-joyeria"><img src="img/accesorios/imagen05.jpg" alt="Image 5">
+                    <div class="item-details">
+                        <h4>Pulsera de Cuero Elegante</h4>
+                        <p>S/ 700.00</p>
+                        <a href="pages/Joyas-Masculinas/Pulseras.html"><button class="btn-add-cart">Ver
+                                Joya</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item-joyeria"><img src="img/accesorios/imagen06.jpg" alt="Image 6">
+                    <div class="item-details">
+                        <h4>Gemelos Artesanales Cuadrado</h4>
+                        <p>S/ 450.00</p>
+                        <a href="pages/Joyas-Masculinas/Gemelos.html"><button class="btn-add-cart">Ver Joya</button></a>
+                    </div>
+                </div>
+                <div class="carousel-item-joyeria"><img src="img/accesorios/imagen07.jpg" alt="Image 7">
+                    <div class="item-details">
+                        <h4>Pulsera de Cuero Acero Inoxidable</h4>
+                        <p>S/ 700.00</p>
+                        <a href="pages/Joyas-Masculinas/Pulseras.html"><button class="btn-add-cart">Ver
+                                Joya</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-indicators-joyeria">
+            <span class="dot-joyeria"></span>
+            <span class="dot-joyeria"></span>
+            <span class="dot-joyeria"></span>
+            <span class="dot-joyeria"></span>
+            <span class="dot-joyeria"></span>
+        </div>
+    </section>
+
+    <!-- Sección de Catálogo 3D 
+    <section id="content" class="content-3D">
+        <div class="box">
+            <span style="--i:1" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 1">
+                <div class="description">Descripción 1</div>
+            </span>
+            <span style="--i:2" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 2">
+                <div class="description">Descripción 2</div>
+            </span>
+            <span style="--i:3" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 3">
+                <div class="description">Descripción 3</div>
+            </span>
+            <span style="--i:4" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 4">
+                <div class="description">Descripción 4</div>
+            </span>
+            <span style="--i:5" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 5">
+                <div class="description">Descripción 5</div>
+            </span>
+            <span style="--i:6" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 6">
+                <div class="description">Descripción 6</div>
+            </span>
+            <span style="--i:7" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 7">
+                <div class="description">Descripción 7</div>
+            </span>
+            <span style="--i:8" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 8">
+                <div class="description">Descripción 8</div>
+            </span>
+            <span style="--i:9" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 9">
+                <div class="description">Descripción 9</div>
+            </span>
+            <span style="--i:10" class="span">
+                <img src="img/accesorios/Catalogo-3d/catalogo-1.webp" alt="Descripción 10">
+                <div class="description">Descripción 10</div>
+            </span>
+        </div>
+    </section> -->
+
+    <!-- Sección de video -->
+    <section id="video">
+        <div class="contenido-contenedor">
+            <div class="video-contenedor">
+                <video autoplay loop muted poster="poster-image.jpg" preload="auto">
+                    <source src="video/video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div class="imagenes-contenedor">
+                <div class="imagen">
+                    <div class="imagen-item">
+                        <img src="img/accesorios/imagen0001.jpg" alt="Imagen 1">
+                        <div class="descripcion">Aretes de Oro</div>
+                    </div>
+                    <div class="imagen-item">
+                        <img src="img/accesorios/imagen0002.jpg" alt="Imagen 2">
+                        <div class="descripcion">Cadena de Oro Nombre</div>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <div class="imagen-item">
+                        <img src="img/accesorios/imagen0003.jpg" alt="Imagen 3">
+                        <div class="descripcion">Anillo de Acero Firme</div>
+                    </div>
+                    <div class="imagen-item">
+                        <img src="img/accesorios/imagen0004.jpg" alt="Imagen 4">
+                        <div class="descripcion">Anillo Minimalista</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección botones -->
+    <section id="buttons" class="buttons">
+        <button id="main-button" class="main-button">
+            <i class="fas fa-share-alt"></i>
+        </button>
+        <button class="twitter-button button">
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </button>
+        <button class="messenger-button button">
+            <a href="https://messenger.com" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+        </button>
+        <button class="instagram-button button">
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </button>
+        <button class="whatsapp-button button">
+            <a href="https://whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </button>
+    </section>
+
+    <!-- Sección Colaboradores  -->
+    <section id="socios" class="carousel-container-socios">
+        <div class="carousel-wrapper-socios">
+            <div class="carousel-socios">
+                <div class="carousel-item-socios">
+                    <div class="image-container">
+                        <img src="img/colaboradores/alliance-logo.webp" alt="Anillo">
+                    </div>
+                </div>
+                <div class="carousel-item-socios">
+                    <div class="image-container">
+                        <img src="img/colaboradores/fair-logo.webp" alt="Aretes">
+                    </div>
+                </div>
+                <div class="carousel-item-socios">
+                    <div class="image-container">
+                        <img src="img/colaboradores/Logo_Fairmined.webp" alt="Pulsera">
+                    </div>
+                </div>
+                <div class="carousel-item-socios">
+                    <div class="image-container">
+                        <img src="img/colaboradores/planetGold-logo.webp" alt="Collar">
+                    </div>
+                </div>
+                <div class="carousel-item-socios">
+                    <div class="image-container">
+                        <img src="img/colaboradores/alliance-logo.webp" alt="Aretes Oso">
+                    </div>
+                </div>
+                <div class="carousel-item-socios">
+                    <div class="image-container">
+                        <img src="img/colaboradores/fair-logo.webp" alt="Aretes">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="">
+        <div class="footer-container">
+            <div class="footer-column">
+                <a href="index.html">
+                    <img src="img/LogoJoyeria.png" alt="">
+                </a>
+                <p>Desde 1990 brindando momentos especiales representados en piezas únicas que adquieren sentimiento y
+                    valor en sus vidas.</p>
+                <p>Nuestras Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" class="icons neumorphism"><i id="s-facebook" class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="icons neumorphism"><i id="s-instagram" class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" class="icons neumorphism"><i id="s-youtube" class="fab fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/es/" target="_blank" class="icons neumorphism"><i id="s-tiktok" class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>NUESTRA EMPRESA</h3>
+                <ul>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Recojos y Envíos</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>TIENDAS</h3>
+                <details>
+                    <summary>San Isidro <i class="fas fa-chevron-down"></i></summary>
+                    <p>Av. Pardo y Aliaga 572, San Isidro, Lima, Perú<br>
+                        Teléfono: +51 719-5359<br>
+                        Horario: Lunes a Viernes de 10:00am a 7:00pm y<br>
+                        Sábados de 10:00am a 5:00pm</p>
+                </details>
+                <details>
+                    <summary>Miraflores <i class="fas fa-chevron-down"></i></summary>
+                    <p>Av. La Paz 1198, Miraflores, Lima, Perú<br>
+                        Teléfono: +51 165-26666<br>
+                        Horario: Lunes a Viernes de 10:30am a 7:00pm y<br>
+                        Sábados de 10:30am a 5:00pm</p>
+                </details>
+                <details>
+                    <summary>Surco - Jockey Plaza <i class="fas fa-chevron-down"></i></summary>
+                    <p>Av. Javier Prado Este 4200, Jockey Plaza, Surco, Lima, Perú<br>
+                        Teléfono: +51 127-94393<br>
+                        Horario: Lunes a Domingo 11:00am a 9:15pm</p>
+                </details>
+                <p>Edith S.A.C.<br>RUC: 20650552194</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>MÉTODOS DE PAGO</h3>
+                <img src="img/footer/pagos.png" alt="Métodos de Pago">
+                <h3>Libro de Reclamaciones</h3>
+                <a href="pages/reclamo.html">
+                    <img src="img/footer/reclamos.png" alt="Libro de Reclamo">
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Todos Los Derechos Reservados</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/agregar.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bar-icon.js"></script>
+    <script src="js/colaboradores.js"></script>
+
+</body>
+
+</html>

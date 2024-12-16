@@ -1,0 +1,159 @@
+.buttons {
+    position: fixed;
+    right: 60px;
+    top: 90%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    height: fit-content;
+    width: fit-content;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.main-button {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    border: none;
+    background-color: #ffe4e1; 
+    box-shadow: inset 8px 8px 15px rgba(0, 0, 0, 0.1), inset -8px -8px 15px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.main-button:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.8); 
+    color: rgba(0, 102, 255, 0.737);
+}
+
+.button {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    border: none;
+    background: var(--color-fondo);
+    border-radius: 50%;
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.button a {
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.buttons i {
+    font-size: 25px; 
+    transition: 0.2s; 
+}
+
+
+.buttons .button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.buttons.show-buttons .twitter-button {
+    translate: 0px -80px;
+}
+
+.buttons .twitter-button:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.8); 
+}
+
+.buttons.show-buttons .messenger-button {
+    translate: 0px -160px;
+}
+
+.buttons .messenger-button:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.8); 
+}
+
+.buttons.show-buttons .instagram-button {
+    translate: 0px -240px;
+}
+
+.buttons .instagram-button:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.8); 
+}
+
+
+.buttons.show-buttons .whatsapp-button {
+    translate: 0px -320px;
+}
+
+.buttons .whatsapp-button:hover {
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.8); 
+}
+
+
+.twitter-button:hover i {
+    color: #1DA1F2; 
+}
+
+.messenger-button:hover i {
+    color: #006aff; 
+}
+
+.instagram-button:hover i {
+    color: #E1306C; 
+}
+
+.whatsapp-button:hover i {
+    color: #25D366; 
+}
+
+
+
+
+
+
+/* ============================= */
+/*          ICONS         */
+/* ============================= */
+@media (max-width: 768px) {
+    .buttons {
+      right: 20px; 
+      top: 85%; 
+      transform: translateY(-50%);
+      z-index: 1000
+    }
+  
+    .main-button {
+      padding: 15px; 
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    }
+  
+    .button {
+      padding: 15px; 
+      translate: 0px; 
+      opacity: 1;
+    }
+  
+    .button i {
+      font-size: 20px; 
+    }
+  
+    .buttons.show-buttons .twitter-button {
+      translate: 0px -60px;
+    }
+  
+    .buttons.show-buttons .messenger-button {
+      translate: 0px -120px;
+    }
+  
+    .buttons.show-buttons .instagram-button {
+      translate: 0px -180px;
+    }
+  
+    .buttons.show-buttons .whatsapp-button {
+      translate: 0px -240px;
+    }
+  }
+  

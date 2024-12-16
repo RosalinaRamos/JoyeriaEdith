@@ -1,0 +1,208 @@
+.historia {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 200px 180px 20px 180px;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  .contenedor-historia {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .texto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  .imagen {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .imagen img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .descripcion {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+ 
+
+
+
+
+
+
+
+  .seccion-joyeria {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.icono-superior {
+  margin-bottom: 1.5rem;
+}
+
+.icono {
+  font-size: 2rem;
+  padding: 0px  0px 30px 0px;
+  color: var(--color-texto);
+}
+
+.icono img{
+  width: 50px;
+}
+
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.imagen-izquierda {
+  flex: 1;
+  text-align: center;
+}
+
+.imagen-izquierda .imagen {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--sombra-oscura);
+}
+
+.info-derecha {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.caracteristica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.caracteristica img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.caracteristica p {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .historia {
+    padding: 260px 20px 20px 20px; 
+  }
+
+  .titulo {
+    font-size: 1.5rem; 
+    margin-bottom: 1rem;
+  }
+
+  .contenedor-historia {
+    display: block;
+  }
+
+  .fila {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .texto, .imagen {
+    max-width: 100%;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+
+  .imagen img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .descripcion {
+    font-size: 0.85rem; 
+  }
+
+  .seccion-joyeria {
+    padding: 1rem;
+  }
+
+  .contenedor {
+    display: block;
+    padding: 0 1rem;
+  }
+
+  .imagen-izquierda {
+    margin-bottom: 1rem;
+  }
+
+  .info-derecha {
+    display: block;
+    padding: 1rem;
+  }
+
+  .caracteristica {
+    margin-bottom: 1rem;
+  }
+
+  .icono img {
+    width: 40px; 
+  }
+
+  .caracteristica img {
+    width: 40px;
+    height: 40px; 
+  }
+
+  .imagen, .texto {
+    padding: 0 1rem;
+  }
+
+  .imagen img {
+    max-width: 100%;
+  }
+}
